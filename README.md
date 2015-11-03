@@ -8,3 +8,4 @@ Guaranteed to find you a job with the following steps:
 4. Send resumes
 5. Get a job
 6. If not, goto step <code>1</code>
+7. There is no step <code>7</code>
