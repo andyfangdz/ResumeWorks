@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<table><tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>slug</td><td>{{ object.slug }}</td></tr>
+<tr><td>created</td><td>{{ object.created }}</td></tr>
+<tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+<tr><td>title</td><td>{{ object.title }}</td></tr>
+<tr><td>description</td><td>{{ object.description }}</td></tr>
+</table>
+{% endblock %}
+<a href="{{object.get_update_url}}">Edit Reference</a>
