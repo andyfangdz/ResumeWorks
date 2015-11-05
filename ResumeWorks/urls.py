@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import patterns, url, include
 from django.contrib import admin
+from material.frontend import urls as frontend_urls
 
 urlpatterns = (
+    url(r'', include(frontend_urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ResumeWorks/', include('resume.urls')),
 )

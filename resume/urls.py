@@ -8,81 +8,81 @@ urlpatterns = patterns('')
 
 urlpatterns += patterns('',
     # urls for Project
-    url(r'^ResumeWorks/project/$', ProjectListView.as_view(), name='ResumeWorks_project_list'),
-    url(r'^ResumeWorks/project/create/$', ProjectCreateView.as_view(), name='ResumeWorks_project_create'),
-    url(r'^ResumeWorks/project/detail/(?P<slug>\S+)/$', ProjectDetailView.as_view(), name='ResumeWorks_project_detail'),
-    url(r'^ResumeWorks/project/update/(?P<slug>\S+)/$', ProjectUpdateView.as_view(), name='ResumeWorks_project_update'),
+    url(r'^project/$', ProjectListView.as_view(), name='resume_project_list'),
+    url(r'^project/create/$', ProjectCreateView.as_view(), name='resume_project_create'),
+    url(r'^project/detail/(?P<slug>\S+)/$', ProjectDetailView.as_view(), name='resume_project_detail'),
+    url(r'^project/update/(?P<slug>\S+)/$', ProjectUpdateView.as_view(), name='resume_project_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Experience
-    url(r'^ResumeWorks/experience/$', ExperienceListView.as_view(), name='ResumeWorks_experience_list'),
-    url(r'^ResumeWorks/experience/create/$', ExperienceCreateView.as_view(), name='ResumeWorks_experience_create'),
-    url(r'^ResumeWorks/experience/detail/(?P<slug>\S+)/$', ExperienceDetailView.as_view(), name='ResumeWorks_experience_detail'),
-    url(r'^ResumeWorks/experience/update/(?P<slug>\S+)/$', ExperienceUpdateView.as_view(), name='ResumeWorks_experience_update'),
+    url(r'^experience/$', ExperienceListView.as_view(), name='resume_experience_list'),
+    url(r'^experience/create/$', ExperienceCreateView.as_view(), name='resume_experience_create'),
+    url(r'^experience/detail/(?P<slug>\S+)/$', ExperienceDetailView.as_view(), name='resume_experience_detail'),
+    url(r'^experience/update/(?P<slug>\S+)/$', ExperienceUpdateView.as_view(), name='resume_experience_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Education
-    url(r'^ResumeWorks/education/$', EducationListView.as_view(), name='ResumeWorks_education_list'),
-    url(r'^ResumeWorks/education/create/$', EducationCreateView.as_view(), name='ResumeWorks_education_create'),
-    url(r'^ResumeWorks/education/detail/(?P<slug>\S+)/$', EducationDetailView.as_view(), name='ResumeWorks_education_detail'),
-    url(r'^ResumeWorks/education/update/(?P<slug>\S+)/$', EducationUpdateView.as_view(), name='ResumeWorks_education_update'),
+    url(r'^education/$', EducationListView.as_view(), name='resume_education_list'),
+    url(r'^education/create/$', EducationCreateView.as_view(), name='resume_education_create'),
+    url(r'^education/detail/(?P<slug>\S+)/$', EducationDetailView.as_view(), name='resume_education_detail'),
+    url(r'^education/update/(?P<slug>\S+)/$', EducationUpdateView.as_view(), name='resume_education_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Skill
-    url(r'^ResumeWorks/skill/$', SkillListView.as_view(), name='ResumeWorks_skill_list'),
-    url(r'^ResumeWorks/skill/create/$', SkillCreateView.as_view(), name='ResumeWorks_skill_create'),
-    url(r'^ResumeWorks/skill/detail/(?P<slug>\S+)/$', SkillDetailView.as_view(), name='ResumeWorks_skill_detail'),
-    url(r'^ResumeWorks/skill/update/(?P<slug>\S+)/$', SkillUpdateView.as_view(), name='ResumeWorks_skill_update'),
+    url(r'^skill/$', SkillListView.as_view(), name='resume_skill_list'),
+    url(r'^skill/create/$', SkillCreateView.as_view(), name='resume_skill_create'),
+    url(r'^skill/detail/(?P<slug>\S+)/$', SkillDetailView.as_view(), name='resume_skill_detail'),
+    url(r'^skill/update/(?P<slug>\S+)/$', SkillUpdateView.as_view(), name='resume_skill_update'),
 )
 
 urlpatterns += patterns('',
     # urls for SkillGroup
-    url(r'^ResumeWorks/skillgroup/$', SkillGroupListView.as_view(), name='ResumeWorks_skillgroup_list'),
-    url(r'^ResumeWorks/skillgroup/create/$', SkillGroupCreateView.as_view(), name='ResumeWorks_skillgroup_create'),
-    url(r'^ResumeWorks/skillgroup/detail/(?P<slug>\S+)/$', SkillGroupDetailView.as_view(), name='ResumeWorks_skillgroup_detail'),
-    url(r'^ResumeWorks/skillgroup/update/(?P<slug>\S+)/$', SkillGroupUpdateView.as_view(), name='ResumeWorks_skillgroup_update'),
+    url(r'^skillgroup/$', SkillGroupListView.as_view(), name='resume_skillgroup_list'),
+    url(r'^skillgroup/create/$', SkillGroupCreateView.as_view(), name='resume_skillgroup_create'),
+    url(r'^skillgroup/detail/(?P<slug>\S+)/$', SkillGroupDetailView.as_view(), name='resume_skillgroup_detail'),
+    url(r'^skillgroup/update/(?P<slug>\S+)/$', SkillGroupUpdateView.as_view(), name='resume_skillgroup_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Course
-    url(r'^ResumeWorks/course/$', CourseListView.as_view(), name='ResumeWorks_course_list'),
-    url(r'^ResumeWorks/course/create/$', CourseCreateView.as_view(), name='ResumeWorks_course_create'),
-    url(r'^ResumeWorks/course/detail/(?P<slug>\S+)/$', CourseDetailView.as_view(), name='ResumeWorks_course_detail'),
-    url(r'^ResumeWorks/course/update/(?P<slug>\S+)/$', CourseUpdateView.as_view(), name='ResumeWorks_course_update'),
+    url(r'^course/$', CourseListView.as_view(), name='resume_course_list'),
+    url(r'^course/create/$', CourseCreateView.as_view(), name='resume_course_create'),
+    url(r'^course/detail/(?P<slug>\S+)/$', CourseDetailView.as_view(), name='resume_course_detail'),
+    url(r'^course/update/(?P<slug>\S+)/$', CourseUpdateView.as_view(), name='resume_course_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Reference
-    url(r'^ResumeWorks/reference/$', ReferenceListView.as_view(), name='ResumeWorks_reference_list'),
-    url(r'^ResumeWorks/reference/create/$', ReferenceCreateView.as_view(), name='ResumeWorks_reference_create'),
-    url(r'^ResumeWorks/reference/detail/(?P<slug>\S+)/$', ReferenceDetailView.as_view(), name='ResumeWorks_reference_detail'),
-    url(r'^ResumeWorks/reference/update/(?P<slug>\S+)/$', ReferenceUpdateView.as_view(), name='ResumeWorks_reference_update'),
+    url(r'^reference/$', ReferenceListView.as_view(), name='resume_reference_list'),
+    url(r'^reference/create/$', ReferenceCreateView.as_view(), name='resume_reference_create'),
+    url(r'^reference/detail/(?P<slug>\S+)/$', ReferenceDetailView.as_view(), name='resume_reference_detail'),
+    url(r'^reference/update/(?P<slug>\S+)/$', ReferenceUpdateView.as_view(), name='resume_reference_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Personal
-    url(r'^ResumeWorks/personal/$', PersonalListView.as_view(), name='ResumeWorks_personal_list'),
-    url(r'^ResumeWorks/personal/create/$', PersonalCreateView.as_view(), name='ResumeWorks_personal_create'),
-    url(r'^ResumeWorks/personal/detail/(?P<slug>\S+)/$', PersonalDetailView.as_view(), name='ResumeWorks_personal_detail'),
-    url(r'^ResumeWorks/personal/update/(?P<slug>\S+)/$', PersonalUpdateView.as_view(), name='ResumeWorks_personal_update'),
+    url(r'^personal/$', PersonalListView.as_view(), name='resume_personal_list'),
+    url(r'^personal/create/$', PersonalCreateView.as_view(), name='resume_personal_create'),
+    url(r'^personal/detail/(?P<slug>\S+)/$', PersonalDetailView.as_view(), name='resume_personal_detail'),
+    url(r'^personal/update/(?P<slug>\S+)/$', PersonalUpdateView.as_view(), name='resume_personal_update'),
 )
 
 urlpatterns += patterns('',
     # urls for ReferenceRequest
-    url(r'^ResumeWorks/referencerequest/$', ReferenceRequestListView.as_view(), name='ResumeWorks_referencerequest_list'),
-    url(r'^ResumeWorks/referencerequest/create/$', ReferenceRequestCreateView.as_view(), name='ResumeWorks_referencerequest_create'),
-    url(r'^ResumeWorks/referencerequest/detail/(?P<slug>\S+)/$', ReferenceRequestDetailView.as_view(), name='ResumeWorks_referencerequest_detail'),
-    url(r'^ResumeWorks/referencerequest/update/(?P<slug>\S+)/$', ReferenceRequestUpdateView.as_view(), name='ResumeWorks_referencerequest_update'),
+    url(r'^referencerequest/$', ReferenceRequestListView.as_view(), name='resume_referencerequest_list'),
+    url(r'^referencerequest/create/$', ReferenceRequestCreateView.as_view(), name='resume_referencerequest_create'),
+    url(r'^referencerequest/detail/(?P<slug>\S+)/$', ReferenceRequestDetailView.as_view(), name='resume_referencerequest_detail'),
+    url(r'^referencerequest/update/(?P<slug>\S+)/$', ReferenceRequestUpdateView.as_view(), name='resume_referencerequest_update'),
 )
 
 urlpatterns += patterns('',
     # urls for Award
-    url(r'^ResumeWorks/award/$', AwardListView.as_view(), name='ResumeWorks_award_list'),
-    url(r'^ResumeWorks/award/create/$', AwardCreateView.as_view(), name='ResumeWorks_award_create'),
-    url(r'^ResumeWorks/award/detail/(?P<slug>\S+)/$', AwardDetailView.as_view(), name='ResumeWorks_award_detail'),
-    url(r'^ResumeWorks/award/update/(?P<slug>\S+)/$', AwardUpdateView.as_view(), name='ResumeWorks_award_update'),
+    url(r'^award/$', AwardListView.as_view(), name='resume_award_list'),
+    url(r'^award/create/$', AwardCreateView.as_view(), name='resume_award_create'),
+    url(r'^award/detail/(?P<slug>\S+)/$', AwardDetailView.as_view(), name='resume_award_detail'),
+    url(r'^award/update/(?P<slug>\S+)/$', AwardUpdateView.as_view(), name='resume_award_update'),
 )
 

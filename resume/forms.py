@@ -5,60 +5,60 @@ from .models import Project, Experience, Education, Skill, SkillGroup, Course, R
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name', 'slug', 'date_started', 'date_ended', 'description', 'url', 'is_current']
+        fields = ['name', 'date_started', 'date_ended', 'description', 'url', 'is_current']
 
 
 class ExperienceForm(forms.ModelForm):
     class Meta:
         model = Experience
-        fields = ['company', 'slug', 'date_started', 'date_ended', 'is_current', 'description', 'project']
+        fields = ['company', 'date_started', 'date_ended', 'is_current', 'description', 'projects']
 
 
 class EducationForm(forms.ModelForm):
     class Meta:
         model = Education
-        fields = ['name', 'slug', 'Major', 'Description', 'GPA', 'GPA_major', 'show_gpa', 'show_gpa_major', 'date_started', 'date_ended']
+        fields = ['name', 'Major', 'Description', 'GPA', 'GPA_major', 'show_gpa', 'show_gpa_major', 'date_started', 'date_ended']
 
 
 class SkillForm(forms.ModelForm):
     class Meta:
         model = Skill
-        fields = ['name', 'slug', 'skillgroup']
+        fields = ['name', 'belong_to']
 
 
 class SkillGroupForm(forms.ModelForm):
     class Meta:
         model = SkillGroup
-        fields = ['name', 'slug']
+        fields = ['name']
 
 
 class CourseForm(forms.ModelForm):
     class Meta:
         model = Course
-        fields = ['name', 'slug', 'major']
+        fields = ['name', 'major']
 
 
 class ReferenceForm(forms.ModelForm):
     class Meta:
         model = Reference
-        fields = ['name', 'slug', 'title', 'description']
+        fields = ['name', 'title', 'description']
 
 
 class PersonalForm(forms.ModelForm):
     class Meta:
         model = Personal
-        fields = ['name', 'slug', 'phone', 'location']
+        fields = ['name', 'phone', 'location']
 
 
 class ReferenceRequestForm(forms.ModelForm):
     class Meta:
         model = ReferenceRequest
-        fields = ['name', 'slug', 'email', 'reference']
+        fields = ['name', 'email', 'references']
 
 
 class AwardForm(forms.ModelForm):
     class Meta:
         model = Award
-        fields = ['name', 'slug', 'date_awerded', 'awerder', 'project']
+        fields = ['name', 'date_awerded', 'awerder', 'projects']
 
 
