@@ -35,6 +35,7 @@ INSTALLED_APPS = (
     'material.admin',
     # in-house
     'resume',
+    'presentation',
 
     # django
     'django.contrib.admin',
