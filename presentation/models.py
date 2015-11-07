@@ -13,21 +13,21 @@ class Presentation(models.Model):
 
     # Fields
     name = CharField(max_length=255)
-    slug = AutoSlugField(populate_from='name', blank=True)
+    slug = AutoSlugField(populate_from='name', null=True, blank=True)
     is_default = BooleanField()
     created = DateTimeField(auto_now_add=True, editable=False)
     last_updated = DateTimeField(auto_now=True, editable=False)
 
     # Relationship Fields
-    projects = ManyToManyField('resume.Project',)
-    educations = ManyToManyField('resume.Education',)
-    experiences = ManyToManyField('resume.Experience',)
-    courses = ManyToManyField('resume.Course',)
-    personal = ForeignKey('resume.Personal',)
-    skill_groups = ManyToManyField('resume.SkillGroup',)
-    skills = ManyToManyField('resume.Skill',)
-    references = ManyToManyField('resume.Reference',)
-    awards = ManyToManyField('resume.Award',)
+    projects = ManyToManyField('resume.Project', null=True, blank=True)
+    educations = ManyToManyField('resume.Education', null=True, blank=True)
+    experiences = ManyToManyField('resume.Experience', null=True, blank=True)
+    courses = ManyToManyField('resume.Course', null=True, blank=True)
+    personal = ForeignKey('resume.Personal', null=True, blank=True)
+    skill_groups = ManyToManyField('resume.SkillGroup', null=True, blank=True)
+    skills = ManyToManyField('resume.Skill', null=True, blank=True)
+    references = ManyToManyField('resume.Reference', null=True, blank=True)
+    awards = ManyToManyField('resume.Award', null=True, blank=True)
 
     class Meta:
         ordering = ('-created',)

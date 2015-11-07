@@ -10,6 +10,7 @@ from django.db.models import ManyToManyField
 from django.db.models import DecimalField
 from django.db.models import ForeignKey
 from django.db.models import EmailField
+from django.db.models import IntegerField
 
 
 class Project(models.Model):
@@ -44,7 +45,7 @@ class Experience(models.Model):
 
     # Fields
     company = CharField(max_length=255)
-    slug = AutoSlugField(populate_from='name', blank=True)
+    slug = AutoSlugField(populate_from='company', blank=True)
     created = DateTimeField(auto_now_add=True, editable=False)
     last_updated = DateTimeField(auto_now=True, editable=False)
     date_started = DateField()
@@ -53,7 +54,7 @@ class Experience(models.Model):
     description = TextField(blank=True, null=True)
 
     # Relationship Fields
-    projects = ManyToManyField('resume.Project',)
+    projects = ManyToManyField('resume.Project', null=True, blank=True)
 
     class Meta:
         ordering = ('-created',)
@@ -107,6 +108,9 @@ class Skill(models.Model):
     slug = AutoSlugField(populate_from='name', blank=True)
     created = DateTimeField(auto_now_add=True, editable=False)
     last_updated = DateTimeField(auto_now=True, editable=False)
+    years = IntegerField(null=True, blank=True)
+    proficiency = DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    level = CharField(max_length=255, blank=True, null=True)
 
     # Relationship Fields
     belong_to = ForeignKey('resume.SkillGroup',)
@@ -204,8 +208,8 @@ class Personal(models.Model):
     slug = AutoSlugField(populate_from='name', blank=True)
     created = DateTimeField(auto_now_add=True, editable=False)
     last_updated = DateTimeField(auto_now=True, editable=False)
-    phone = CharField(max_length=30)
-    location = CharField(max_length=30)
+    phone = CharField(max_length=30, null=True, blank=True)
+    location = CharField(max_length=30, null=True, blank=True)
 
 
     class Meta:
@@ -259,7 +263,7 @@ class Award(models.Model):
     awerder = CharField(max_length=255, null=True, blank=True)
 
     # Relationship Fields
-    projects = ManyToManyField('resume.Project',null=True, blank=True)
+    projects = ManyToManyField('resume.Project', null=True, blank=True)
 
     class Meta:
         ordering = ('-created',)
