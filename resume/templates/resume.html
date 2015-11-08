@@ -1,0 +1,527 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+
+
+    <title> {{p.personal.name}} :: CV </title>
+    <meta name="description" content=" add description  ... ">
+
+    <!-- /// Favicons ////////  -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="{% static 'style-2/favicon.png' %}">
+
+
+    <!-- /// Template CSS ////////  -->
+    <link rel="stylesheet" href="{% static 'style-2/_layout/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'style-2/_layout/css/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'style-2/_layout/css/elements.css' %}">
+    <link rel="stylesheet" href="{% static 'style-2/_layout/css/layout.css' %}">
+
+    <!-- /// JS Plugins CSS ////////  -->
+    <link rel="stylesheet" href="{% static 'style-2/_layout/js/bxslider/jquery.bxslider.css' %}">
+    <link rel="stylesheet" href="{% static 'style-2/_layout/js/magnificpopup/magnific-popup.css' %}">
+
+    <!-- /// Skin CSS ////////  -->
+    <!-- <link rel="stylesheet" href="_layout/css/skins/default.css"> -->
+    <!-- <link rel="stylesheet" href="_layout/css/skins/blue.css"> -->
+    <!-- <link rel="stylesheet" href="_layout/css/skins/green.css"> -->
+    <!-- <link rel="stylesheet" href="_layout/css/skins/orange.css"> -->
+    <!-- <link rel="stylesheet" href="_layout/css/skins/purple.css"> -->
+    <!-- <link rel="stylesheet" href="_layout/css/skins/red.css"> -->
+
+    <!-- /// Google Fonts ////////  -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700">
+
+    <!-- /// FontAwesome Icons 4.0.3 ////////  -->
+    <link rel="stylesheet" href="{% static 'style-2/_layout/css/fontawesome/font-awesome.min.css' %}">
+
+
+    <!-- /// Modernizr ////////  -->
+    <script src="{% static 'style-2/_layout/js/modernizr-2.6.2.min.js' %}"></script>
+
+</head>
+<body>
+
+
+
+    <noscript>
+        <p class="javascript-required">
+            You seem to have Javascript disabled.
+            This website needs javascript in order to function properly.
+        </p>
+    </noscript>
+
+    <!--[if lte IE 8]>
+        <p class="browser-update">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">upgrade your browser</a>
+            to improve your experience.
+        </p>
+    <![endif]-->
+
+    <div id="wrap">
+
+        <div id="header">
+
+        <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <div class="parallax full-screen" style="background-image:url({% static 'style-2/_content/backgrounds/1920x1280.jpg' %});">
+
+                <div class="parallax-content full-screen">
+
+                    <div class="row">
+                        <div class="span12">
+
+                            <div class="cv-section-title">
+
+                                <img src="{{p.personal.avatar.url}}" style="height: 200px" alt="">
+
+                                <h1>
+                                    {{p.personal.name}}
+                                </h1>
+
+                                <p>{{p.personal.title}}</p>
+
+                            </div><!-- end .cv-section-title -->
+
+                        </div><!-- end .span12 -->
+                    </div><!-- end .row -->
+
+                </div><!-- end .parallax-content -->
+
+            </div><!-- end .parallax -->
+
+            <div id="nav">
+
+                <div class="row">
+                    <div class="span12">
+
+                        <h4 class="text-uppercase">
+                            {{p.personal.name}} <br>
+                            <small>{{p.personal.title}}</small>
+                        </h4>
+
+                        <a href="#" id="mobile-menu-trigger">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <!-- // Menu // -->
+                        <ul class="sf-menu" id="menu">
+                            <li class="active">
+                                <a href="#personal-info">1.Personal Info</a>
+                            </li>
+                            <li>
+                                <a href="#education">2.Education</a>
+                            </li>
+                            <li>
+                                <a href="#work-experience">3.Work Experience</a>
+                            </li>
+                            <li>
+                                <a href="#projects">4.Projects</a>
+                            </li>
+                            <li>
+                                <a href="#references">5.References</a>
+                            </li>
+                            <li>
+                                <a href="#technical-skills">6.Technical Skills</a>
+                            </li>
+                            <li>
+                                <a href="#contact">7.Contact</a>
+                            </li>
+                        </ul>
+
+                    </div><!-- end .span12 -->
+                </div><!-- end row -->
+
+            </div><!-- end #nav -->
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        </div><!-- end #header -->
+        <div id="content">
+
+        <!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <div id="personal-info">
+
+                <div class="row cv-section">
+                    <div class="span5">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Personal Information</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+
+                        <ul class="personal-info">
+                            <li>Name: {{p.personal.name}}</li>
+                            <li>Location: {{p.personal.location}}</li>
+                            <li>Phone: {{p.personal.phone}}</li>
+                            <li>
+                                Email: <a href="mailto:{{p.personal.email}}">{{p.personal.email}}</a>
+                            </li>
+                            <li>Github: <a href="https://github.com/{{p.personal.github}}">https://www.github.com/{{p.personal.github}}</a></li>
+                            <li>LinkedIn: <a href="https://www.linkedin.com/in/{{p.personal.linkedin}}">https://www.linkedin.com/in/{{p.personal.linkedin}}</a></li>
+                        </ul>
+
+                    </div><!-- end .span5 -->
+                    <div class="span7">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Profesional Profile</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+
+                        {{ p.personal.summary|safe }}
+
+                    </div><!-- end .span7 -->
+                </div><!-- end .cv-section -->
+
+            </div><!-- end #personal-info -->
+            <div id="education">
+
+                <div class="row cv-section">
+                    <div class="span12">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Education</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+
+                        {% for item in p.educations.all %}
+                        <div class="cv-item">
+
+                            <p class="period">{{item.date_started|date:'b Y'}} - {{item.date_ended|date:'b Y'}}</p>
+
+                            <h3>{{item.name}}</h3>
+                            <p>{{item.Major}} - {{item.GPA}} GPA</p>
+
+
+                        </div><!-- end cv-item -->
+                        {% endfor %}
+                    </div><!-- end .span12 -->
+                </div><!-- end .cv-section -->
+
+            </div><!-- end #education -->
+            <div id="work-experience">
+
+                <div class="row cv-section">
+                    <div class="span12">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Work Experince</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+                        {% for item in p.experiences.all %}
+                        <div class="cv-item">
+
+                            <p class="period">{{item.date_started|date:'b Y'}} - {% if item.is_current %}Present{% else %}{{item.date_ended|date:'b Y'}}{% endif %}</p>
+
+                            <h3>{{ item.company }}</h3>
+                            <p>{{ item.title }}</p>
+
+                            {{ item.description|safe }}
+
+                        </div><!-- end cv-item -->
+                        {% endfor %}
+
+                        </div><!-- end cv-item -->
+
+                    </div><!-- end .span12 -->
+                </div><!-- end .cv-section -->
+
+            </div><!-- end #personal-info -->
+            <div id="projects">
+
+                <div class="row cv-section">
+                    <div class="span12">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Projects</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+                        {% for item in p.projects.all %}
+                        <div class="cv-item">
+
+                            <p class="period">{{item.date_started|date:'b Y'}}</p>
+
+                            <h3>{{ item.name }}</h3>
+
+                            {{ item.description|safe }}
+
+                        </div><!-- end cv-item -->
+                        {% endfor %}
+
+                        </div><!-- end cv-item -->
+
+                    </div><!-- end .span12 -->
+                </div><!-- end .cv-section -->
+
+            </div><!-- end #personal-info -->
+
+
+
+            <div class="parallax" id="references" style="background-image:url({% static 'style-2/_content/backgrounds/1920x1000.jpg' %});">
+
+                <div class="row cv-section">
+                    <div class="span12">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>References</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+                        {% for ref in p.references.all %}
+                        <div class="cv-item">
+
+                            <h3>{{ref.name}}</h3>
+                            <p>{{ref.title}}</p>
+
+                            {{ref.description|safe}}
+
+                        </div><!-- end cv-item -->
+                        {% endfor %}
+                    </div><!-- end .span12 -->
+                </div><!-- end .cv-section -->
+
+            </div><!-- end #references -->
+
+            <div id="technical-skills">
+
+                <div class="row cv-section">
+                    <div class="span12">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Technical Skills</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+
+                        <div class="row">
+                            {% for skill in p.skills.all %}
+                            <div class="span3">
+
+                                <div class="pie-chart" data-percent="{{skill.proficiency}}" data-barColor="#fdb020" data-trackColor="#d9d9d9" data-lineWidth="8" data-barSize="160">
+
+                                    <div class="pie-chart-percent">
+                                        <span></span>
+                                        %
+                                    </div><!-- end .pie-chart-percent -->
+
+                                </div><!-- end .pie-chart -->
+
+                                <div class="pie-chart-description">
+
+                                    <h3 class="text-uppercase">{{skill.name}}</h3>
+                                    <p>{{skill.level}}, {{skill.years}} year{{ skill.years|pluralize }}</p>
+
+                                </div><!-- end .pie-chart-description -->
+
+                            </div><!-- end .span3 -->
+                            {% endfor %}
+                        </div><!-- end .row -->
+
+
+                    </div><!-- end .span12 -->
+                </div><!-- end .cv-section -->
+
+            </div><!-- end #technical-skills -->
+
+
+            <div id="contact">
+
+                <div class="row cv-section">
+                    <div class="span12">
+
+                        <div class="cv-section-title">
+
+                            <h2>
+                                <span>Contact</span>
+                            </h2>
+
+                        </div><!-- end .cv-section-title -->
+
+                    </div><!-- end .span12 -->
+                </div><!-- end .cv-section -->
+
+                <div class="row cv-section">
+                    <div class="span8">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque diam. Donec eleifend, nunc et sodales
+                        tincidunt, eros risus pellentesque ante, non tincidunt metus tortor eget sem. Sed aliquet tempus est, sed bibendum
+                        arcu volutpat sit amet. Nam at mollis neque, quis eleifend leo.</p>
+
+                        <form class="fixed" id="contact-form-boss"  name="contact-form" method="post" action="http://formspree.io/andyfang.dz@gmail.com">
+                            <fieldset>
+
+                                <div id="formstatus"></div>
+
+                                <input class="span8" id="name" type="text" name="name" value="" placeholder="enter yout name here">
+
+                                <input class="span8" id="email" type="text" name="email" value="" placeholder="email address">
+
+                                <input class="span8" id="subject" type="text" name="subject" value="" placeholder="subject">
+
+                                <textarea class="span8" id="message" name="message" rows="50" cols="25" placeholder="message"></textarea>
+
+                                <input id="submit" type="submit" name="submit" value="Send!">
+
+                            </fieldset>
+                        </form>
+
+                    </div><!-- end .span8 -->
+                    <div class="span4">
+
+                        <div class="social-media fixed">
+
+                            <a href="#" class="facebook-icon social-icon">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="twitter-icon social-icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="googleplus-icon social-icon">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+
+                            <a href="#" class="linkedin-icon social-icon">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+
+                            <a href="#" class="pinterest-icon social-icon">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+
+                        </div><!-- end .social-media -->
+
+
+
+                    </div><!-- end .span4 -->
+                </div><!-- end .row -->
+
+                <div class="google-map map"
+                    data-zoom="14"
+                    data-address="Georgia Tech"
+                    data-caption="Dezhi Fang" >
+                    <p>This will be replaced with the Google Map.</p>
+                </div>
+
+            </div><!-- end #contact -->
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        </div><!-- end #content -->
+        <div id="footer">
+
+        <!-- /// FOOTER     ///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <div class="row">
+                <div class="span12">
+
+                    <p>&copy; 2015 {{p.personal.name}}. <span class="hidden-phone">All rights reserved</span></p>
+
+                    <a id="back-to-top" href="#">
+                        <i class="fa fa-caret-up"></i>
+                        Top
+                    </a>
+
+                </div><!-- end .span12 -->
+            </div><!-- end .row -->
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        </div><!-- end #footer -->
+
+    </div><!-- end #wrap -->
+
+
+    <!-- /// jQuery ////////  -->
+    <script src="{% static 'style-2/_layout/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- /// ViewPort ////////  -->
+    <script src="{% static 'style-2/_layout/js/viewport/jquery.viewport.js' %}"></script>
+
+    <!-- /// Easing ////////  -->
+    <script src="{% static 'style-2/_layout/js/easing/jquery.easing.1.3.js' %}"></script>
+
+    <!-- /// SimplePlaceholder ////////  -->
+    <script src="{% static 'style-2/_layout/js/simpleplaceholder/jquery.simpleplaceholder.js' %}"></script>
+
+    <!-- /// Fitvids ////////  -->
+    <script src="{% static 'style-2/_layout/js/fitvids/jquery.fitvids.js' %}"></script>
+
+    <!-- /// Superfish Menu ////////  -->
+    <script src="{% static 'style-2/_layout/js/superfish/hoverIntent.js' %}"></script>
+    <script src="{% static 'style-2/_layout/js/superfish/superfish.js' %}"></script>
+
+    <!-- /// bxSlider ////////  -->
+    <script src="{% static 'style-2/_layout/js/bxslider/jquery.bxslider.min.js' %}"></script>
+
+    <!-- /// Magnific Popup ////////  -->
+    <script src="{% static 'style-2/_layout/js/magnificpopup/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- /// Isotope ////////  -->
+    <script src="{% static 'style-2/_layout/js/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'style-2/_layout/js/isotope/imagesloaded.pkgd.min.js' %}"></script>
+
+    <!-- /// Parallax ////////  -->
+    <script src="{% static 'style-2/_layout/js/parallax/jquery.parallax.min.js' %}"></script>
+
+    <!-- /// EasyPieChart ////////  -->
+    <script src="{% static 'style-2/_layout/js/easypiechart/jquery.easypiechart.min.js' %}"></script>
+
+    <!-- /// Easy Tabs ////////  -->
+    <script src="{% static 'style-2/_layout/js/easytabs/jquery.easytabs.min.js' %}"></script>
+
+    <!-- /// Waypoints ////////  -->
+    <script src="{% static 'style-2/_layout/js/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'style-2/_layout/js/waypoints/waypoints-sticky.min.js' %}"></script>
+
+    <!-- /// Form validate ////////  -->
+    <script src="{% static 'style-2/_layout/js/jqueryvalidate/jquery.validate.min.js' %}"></script>
+
+    <!-- /// Form submit ////////  -->
+    <script src="{% static 'style-2/_layout/js/jqueryform/jquery.form.min.js' %}"></script>
+
+    <!-- /// gMap ////////  -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false' %}"></script>
+    <script src="{% static 'style-2/_layout/js/gmap/jquery.gmap.min.js' %}"></script>
+
+    <!-- /// Scrollspy ////////  -->
+    <script src="{% static 'style-2/_layout/js/scrollspy/scrollspy.min.js' %}"></script>
+
+
+
+    <!-- /// Custom JS ////////  -->
+    <script src="{% static 'style-2/_layout/js/scripts.js' %}"></script>
+    <script src="{% static 'style-2/_layout/js/plugins.js' %}"></script>
+
+</body>
+</html>

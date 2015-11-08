@@ -1,0 +1,420 @@
+/**
+ * Name: layout.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#General Layout 
+ *		#Header
+ *		#Content
+ *		#Footer
+ *	#Page Styles
+ *		#Index
+ *		#Portfolio
+ *		#Contact
+ *	#Responsive
+ *		#Large Display
+ *		#Smaller then 1024px width	
+ *		#Tablet (Portrait)
+ *		#Mobile (Portrait and Landscape )
+ *		#Mobile ( Landscape )
+ */
+
+/* ==========================================================================
+   #General Layout 
+   ========================================================================== */
+
+	#wrap {
+		max-width: 980px;
+		margin: 50px auto;
+		background-color: #fff;
+		position: relative;
+		z-index: 90;	
+	}
+	
+/* #Header
+   ========================================================================== */	
+   	
+	#header { }
+		
+	/* Menu */
+	
+	.menu {
+		float: right;
+		list-style: none;
+		margin-top: 10px; 
+	}
+	
+	.menu li a {  
+		font-family: 'Oswald', sans-serif;
+		font-size: 30px;
+		line-height: 40px;
+		color: #dadada; 
+		text-transform: uppercase;
+		text-decoration: none;  
+	}
+	
+	.menu li.current a,
+	.menu li a:hover { color: #2b3036; }
+	
+/* #Content
+   ========================================================================== */
+   		
+	#content { 
+		min-height: 300px; 
+		padding-bottom: 50px;  
+	}
+	
+			
+/* #Footer
+   ========================================================================== */		
+		
+	#footer {}
+	
+	#footer p {
+		padding: 25px;
+		margin-bottom: 0;
+		background-color: #41474e;
+		color: #fff;
+		font-size: 14px;
+	}
+			
+/* ==========================================================================
+   #Page Styles
+   ========================================================================== */
+   
+   	/* CV Section */
+	
+	.cv-section { margin-bottom: 40px; }
+	
+	#header .cv-section:first-child {
+		border-top: 10px solid #41474e; 
+		padding-top: 80px;
+	}
+	
+	#header .cv-section:last-child {
+		padding-bottom: 20px;
+		margin-bottom: 0;
+	}
+	
+	/* CV Section Title */
+	
+	.cv-section-title { margin-bottom: 35px; }
+	#header .cv-section-title { margin-bottom: 0; }
+	
+	.cv-section-title h2 {
+		position: relative;
+		text-transform: uppercase; 
+	}
+	
+	.cv-section-title h2:before {
+		position: absolute;
+		z-index: 1;
+		top: 20px;
+		right: 0;
+		left: 0;
+		border-bottom: 1px solid #dadada;
+		content: "";
+	}
+	
+	.cv-section-title h2 span {
+		position: relative;
+		z-index: 2;
+		padding-right: 25px;
+		background-color: #fff;
+	}
+	
+	.cv-section-title img { 
+		float: left;
+		margin-right: 20px;
+	}
+	
+	.cv-section-title h1 {
+		margin-bottom: 5px;
+		font-size: 51px;
+		line-height: 56px;
+		text-transform: uppercase;
+	}
+	
+	.cv-section-title p {
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: 26px;
+		text-transform: uppercase;
+	}
+	
+	/* CV Item */
+	
+	.cv-item {
+		padding: 10px 0 40px 0;
+		border-bottom: 1px solid #dadada; 
+		margin: 0 0 50px 80px;
+	}
+	
+	.cv-item:last-child {
+		padding-bottom: 0; 
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+	
+	#header .cv-item { padding-top: 0; }
+	
+	.cv-item h3 {
+		margin-bottom: 0;
+		color: #4b525b;
+		text-transform: uppercase;
+	}
+	
+	.period {
+		float: right;
+		padding: 12px 20px;
+		background-color: #c9c9c9;
+		color: #fff;
+		font-size: 18px;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+		text-transform: uppercase;		
+	}
+	
+	.cv-item:hover .period { background-color: #2b3036; }
+   
+/* #Index
+   ========================================================================== */
+   
+   	.personal-info { list-style: none; }
+	
+	.personal-info li {
+		padding: 10px 0;
+		border-bottom: 1px solid #dadada;
+	}
+	
+	.personal-info li:last-child { border-bottom: none; }
+   
+   	.personal-info li a { color: #4b525b; }
+      
+/* #Portfolio
+   ========================================================================== */
+   
+    /* CV Portfolio */
+	
+	.cv-portfolio { 
+		margin-bottom: 90px;
+		color: #2b3036;
+	}
+	
+	.cv-portfolio img {
+		display: block;
+		width: 100%; 
+	}
+	
+	.cv-portfolio p:first-child { margin-bottom: 10px; }
+	.cv-portfolio h3 { margin-bottom: 15px; }
+	.cv-portfolio h3 a { color: #2b3036; }
+	.cv-portfolio .btn { margin-bottom: 0; }
+	
+	/* Portfolio Pagination */
+	
+	.pagination {
+		margin: -50px 0 30px 0;
+		list-style: none; 
+	}
+	
+	.pagination li { float: left; }
+
+	.pagination a { 
+		display: block; 
+		padding: 2px 12px; 
+		border: 1px solid #2b3036; 
+		margin-right: 10px;
+		color: #2b3036;
+		text-decoration: none;
+	}
+	
+	.pagination li:last-child a { margin-right: 0; }
+		
+	.pagination li.current a,
+	.pagination li a:hover {
+		background-color: #2b3036;
+		color: #fff;
+	}
+	
+/* #Contact
+   ========================================================================== */
+	
+	/* Contact Form */
+	
+	#contact-form { 
+		overflow: hidden;
+		margin-bottom: 15px;
+	}
+	
+	#contact-form fieldset { margin: 0; }
+	
+	label.validation-error { color: #b55454; }
+	
+	input.validation-error,
+	textarea.validation-error,
+	select.validation-error { border: 1px solid #a1a1a1; }
+	
+	#contact-form #formstatus {}
+		
+	#contact-form textarea,
+	#contact-form input[type="text"] {
+		padding: 15px 0;
+		border: none;
+		border-bottom: 1px solid #dadada;
+		margin-bottom: 0;
+		resize: none;
+	}
+	
+	#contact-form input[type="submit"] {
+		border: none;
+		margin-top: 30px;
+		background-color: #2b3036;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+	
+	#contact-form input[type="submit"]:hover { background-color: #000; }
+	
+	.social-media { margin-bottom: 20px; }
+	
+/* ==========================================================================
+   #Responsive
+   ========================================================================== */
+   
+/* #Large Display
+   ========================================================================== */
+   	
+	@media (min-width: 1400px) {
+		
+		#wrap { max-width: 1350px; }
+		
+	}
+
+/* #Smaller then 1024px width
+   ========================================================================== */
+	
+	@media (max-width: 1024px) {
+
+		#wrap {}
+		
+		#header {}
+		
+		#content {}
+		
+		#footer {}
+		
+	}
+
+/* #Tablet (Portrait)
+   ========================================================================== */
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		
+		#wrap {}
+		
+		#header {}	
+		
+		#content {}
+		
+		#footer {}
+		
+		.cv-section-title h1 {
+			font-size: 34px;
+			line-height: 38px;
+		}
+
+
+	}
+	
+/* #Mobile (Portrait and Landscape )
+   ========================================================================== */
+	
+	@media (max-width: 767px) {
+	
+		body { 
+			background: none; 
+			background-color: #fff; 
+		}
+		
+		#wrap {}
+		
+		#header {}	
+		
+		#logo {}
+		
+		#content { padding-bottom: 0; }
+		
+		#footer{}	
+
+		.row { padding: 0 40px; }
+		
+		.row .row { 
+			width: auto; 
+			padding: 0 20px; 
+			margin: 0; 
+		}
+		
+		p.last, 
+		h1.last, 
+		h2.last, 
+		h3.last, 
+		h4.last, 
+		h5.last, 
+		address.last, 
+		ul.last, 
+		ol.last { margin-bottom: 20px; }
+		
+		.text-right { text-align: left; }
+		
+		.cv-section { padding-bottom: 20px !important; }
+		
+		#header .cv-section { 
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+		
+		#header .cv-section-title { text-align: center; }
+		
+		.cv-section-title h2:before { display: none; }
+		
+		.cv-section-title img { 
+			float: none;
+			display: inline-block;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+		
+		.menu { 
+			float: none; 
+			margin-top: 30px;
+		}
+		
+		.cv-item { margin-left: 0; }
+		
+		.period { float: none; }
+		
+		.cv-portfolio img { margin-bottom: 30px; }
+		
+		.pagination {
+			margin-top: 0;
+			margin-bottom: 90px; 
+		}
+		
+	}
+	
+/* #Mobile ( Landscape )
+  ========================================================================== */
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		.row { padding: 0 40px; }
+		
+	}	

@@ -3,6 +3,8 @@ db.sqlite3
 __pycache__/
 *.py[cod]
 
+media/
+
 # C extensions
 *.so
 

@@ -1,0 +1,445 @@
+{% load staticfiles %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="{% static 'print.css' %}">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body class="">
+  <div class="document-container pages" style="margin:0 !important" style="height: 1100px !important" id="e-0-c">
+    <div class="document-container pages" style="margin:0 !important" id="e-0-c">
+      <div class="page page-1" style="height: 1100px !important;overflow:hidden;" ng-init="pageIndex = $index + 1" id="e-2-c">
+        <div class="page-content" style="margin-left: 35px; margin-right: 35px; height: 1085px;" id="e-3-c">
+          <div class="row" style="height: 0px" id="e-4-c"></div>
+          <div class="row top-header" id="e-5-c" style="">
+            <div class="section-1 col-md-12" id="e-6-c">
+              <div cr-area="1" page-index="1" class="" id="e-7-c">
+                <div cr="nameplate" cr-nameplate="" class="row" id="e-20-c">
+                  <div ng-controller="NameplateCtrl" class="" id="e-21-c">
+                    <div class="col-md-12" crc-link="nameplate" crc-link-tab="section" id="e-22-c">
+                      <div class="span-left" id="e-23-c">
+                        <div class="nameplate nameplate-horizontal-row" style="letter-spacing: 0px" id="e-24-c">
+                          <div cr-font-size="modifiers.name_size" class="font-primary nameplate-name ng-isolate-scope" id="e-26-c" style="font-size: 42px;">
+                            <div id="e-27-c">
+                              <span class="nameplate-name-value fg-primary" id="e-28-c">{{p.personal.name}}</span>
+                            </div>
+                          </div>
+                          <div cr-font-size="modifiers.occupation_size" class="font-primary nameplate-occupation ng-isolate-scope fg-primary float-right-justify" id="e-31-c" style="font-size: 24px;">
+                            <div id="e-32-c">
+                              <span class="nameplate-occupation-value" id="e-33-c">{{p.personal.title}}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" id="e-34-c">
+                        <div class="col-md-12" id="e-35-c">
+                          <div class="section-header-underline bg-primary underline-full underline-medium" id="e-36-c"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-2 col-md-12" id="e-8-c">
+              <div cr-area="2" page-index="1" class="" id="e-9-c">
+                <div cr="contact" cr-contact="" class="row" id="e-37-c">
+                  <div ng-controller="ContactCtrl" class="" id="e-38-c">
+                    <div class="col-md-12 fg-black hv-primary cr-c-horizontal" id="e-39-c">
+                      <div class="" id="e-40-c">
+                        <div class="contact-container" crc-link="contact" crc-link-tab="section" id="e-51-c">
+                          <div class="row" id="e-52-c">
+                            <div class="col-md-12" id="e-53-c">
+                              <div class="" id="e-55-c">
+                                <div class="inline-left" id="e-56-c">
+                                  <div class="cl-outer-row ng-isolate-scope cr-ct-upper inline-left" flex-width-parent="contact" cr-icon-link="email" value="bind.email_resume()" id="e-253-c">
+                                    <div class="cl-details-wrapper" id="e-254-c"> <i class="fa fa-envelope contact-icon" id="undefined-c"></i>
+                                    </div>
+                                    <div class="cl-content-wrapper" id="e-255-c">
+                                      <a href="mailto:{{p.personal.email}}" target="blank" class="contact-icon-link hover-enabled" flex-width="contact" id="e-256-c" style="font-size: 14px;" lines="1">
+                                        <i class="fa fa-envelope contact-icon" id="undefined-c"></i>
+                                        <span class="font-primary icon-link-text" id="e-257-c">{{p.personal.email}}</span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="cl-outer-row ng-isolate-scope cr-ct-upper inline-left" flex-width-parent="contact" cr-icon-link="website" value="bind.website()" id="e-258-c">
+                                    <div class="cl-details-wrapper" id="e-259-c"> <i class="fa fa-globe contact-icon" id="undefined-c"></i>
+                                    </div>
+                                    <div class="cl-content-wrapper" id="e-260-c">
+                                      <a href="http://{{p.personal.website}}" target="blank" class="contact-icon-link hover-enabled" flex-width="contact" id="e-261-c" style="font-size: 14px;" lines="1">
+                                        <i class="fa fa-globe contact-icon" id="undefined-c"></i>
+                                        <span class="font-primary icon-link-text" id="e-262-c">{{p.personal.website}}</span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="cl-outer-row ng-isolate-scope cr-ct-upper inline-left" flex-width-parent="contact" cr-icon-link="phone" value="bind.phone()" id="e-263-c">
+                                    <div class="cl-details-wrapper" id="e-264-c"> <i class="fa fa-phone contact-icon" id="undefined-c"></i>
+                                    </div>
+                                    <div class="cl-content-wrapper" id="e-265-c">
+                                      <span class="contact-icon-link" flex-width="contact" id="e-266-c" lines="1" style="font-size: 14px;">
+                                        <i class="fa fa-phone contact-icon" id="undefined-c"></i>
+                                        <span class="font-primary icon-link-text" id="e-267-c">{{p.personal.phone}}</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="cl-outer-row ng-isolate-scope cr-ct-upper inline-left" cr-icon-html="location" value="bind.location()" id="e-268-c">
+                                    <div class="cl-details-wrapper" id="e-269-c"> <i class="fa fa-map-marker contact-icon" id="undefined-c"></i>
+                                    </div>
+                                    <div class="cl-content-wrapper" id="e-270-c">
+                                      <div class="contact-icon-link cr-icon-html" flex-width="contact" id="e-271-c" lines="1" style="font-size: 14px;"> <i class="fa fa-map-marker contact-icon inline-left" id="undefined-c"></i>
+                                        <div markdown-viewer="" class="font-primary icon-link-text inline-left align-left ng-pristine ng-untouched ng-valid" ng-model="value" id="e-272-c">
+                                          <div id="e-273-c">
+                                            <span style="line-height: 1.42857;" id="e-274-c">{{p.personal.location}}</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="" id="e-62-c">
+                                <div class="inline-left" id="e-63-c">
+                                  <div class="cl-outer-row ng-isolate-scope cr-ct-upper inline-left" flex-width-parent="contact" cr-icon-link="github" value="bind.github()" id="e-275-c">
+                                    <div class="cl-details-wrapper" id="e-276-c"> <i class="fa fa-github contact-icon" id="undefined-c"></i>
+                                    </div>
+                                    <div class="cl-content-wrapper" id="e-277-c">
+                                      <a href="http://www.github.com/{{p.personal.github}}" target="blank" class="contact-icon-link hover-enabled" flex-width="contact" id="e-278-c" style="font-size: 14px;" lines="1">
+                                        <i class="fa fa-github contact-icon" id="undefined-c"></i>
+                                        <span class="font-primary icon-link-text" id="e-279-c">{{p.personal.github}}</span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="e-10-c" style="height: 994px;">
+            <div class="section-3 col-md-12" id="e-11-c">
+              <div cr-area="3" page-index="1" class="" id="e-12-c">
+                <div cr="education" cr-education="" class="row" id="e-65-c">
+                  <div ng-controller="EducationCtrl" class="" id="e-66-c">
+                    <div class="col-md-12" id="e-68-c">
+                      <div class="" id="e-69-c">
+                        <div cr-section-header="" class="ng-isolate-scope" id="e-71-c">
+                          <div class="row section-header header-underline" crc-link="section_header" id="e-72-c">
+                            <div class="font-primary col-md-12 fg-primary lowercase medium" id="e-73-c">
+                              <span class="" id="e-74-c"></span>
+                              <span ng-transclude="" style="letter-spacing: 0px" class="font-weight-normal" id="e-75-c">
+                                <span class="" id="e-76-c">Education</span>
+                              </span>
+                            </div>
+                            <div class="col-md-12" id="e-77-c">
+                              <div class="section-header-underline bg-primary underline-full underline-thin" id="e-78-c"></div>
+                            </div>
+                          </div>
+                        </div>
+                        {% for item in p.educations.all %}
+                        <div class="item-container header-padding" crc-link="education" crc-link-tab="section" id="e-79-c">
+                          <div class="content-group" id="e-281-c">
+                            <div class="row" id="e-282-c">
+                              <div class="align-right block col-md-3" id="e-283-c">
+                                <div flex-height="9" flex-width-parent="degree" class="font-secondary" id="e-284-c" flex-height-font-size="12px" style="font-size: 12px;">
+                                  <div flex-width="degree" class="" id="e-285-c" style="line-height: 1.1; margin-top: 0.5px; font-size: 12px;">{{item.date_ended|date:'Y'}}</div>
+                                </div>
+                              </div>
+                              <div class="block col-md-9" id="e-286-c">
+                                <div flex-height="10" class="font-primary content-title" id="e-287-c" flex-height-font-size="13px" lines="1" style="line-height: 1.1; font-size: 13px;">{{item.name}}</div>
+                                <div flex-height="9" flex-width-parent="degree" class="font-secondary" id="e-288-c" flex-height-font-size="12px" style="font-size: 12px;">
+                                  <div flex-width="degree" class="" id="e-289-c" style="font-size: 12px;">{{item.Major}}</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div cr="skills" cr-skills="" class="row" id="e-80-c">
+                  <div ng-controller="SkillsCtrl" class="" id="e-81-c">
+                    <div class="" id="e-82-c">
+                      <div class="col-md-12" id="e-83-c">
+                        <div class="" id="e-84-c">
+                          <div cr-section-header="" class="ng-isolate-scope" id="e-86-c">
+                            <div class="row section-header header-underline" crc-link="section_header" id="e-87-c">
+                              <div class="font-primary col-md-12 fg-primary lowercase medium" id="e-88-c">
+                                <span class="" id="e-89-c"></span>
+                                <span ng-transclude="" style="letter-spacing: 0px" class="font-weight-normal" id="e-90-c">
+                                  <span class="" id="e-91-c">Skills</span>
+                                </span>
+                              </div>
+                              <div class="col-md-12" id="e-92-c">
+                                <div class="section-header-underline bg-primary underline-full underline-thin" id="e-93-c"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="skills-padding" crc-link="skills" crc-link-tab="section" id="e-95-c">
+                            {% for item in p.skill_groups.all %}
+                            <div class="skills-container row" id="e-96-c">
+                              <span class="align-right block col-md-3" id="e-97-c">
+                                <span flex-height="7" class="font-primary sg-name uppercase font-weight-normal" id="e-98-c" flex-height-font-size="9px" lines="1" style="font-size: 9px;">
+                                  {{item.name}}
+                                </span>
+                              </span>
+                              <span class="skills-list block col-md-9" id="e-99-c">
+                                {% for skill in item.skill_set.all %}
+                                <span flex-height="8" class="font-secondary no-wrap" id="e-101-c" flex-height-font-size="11px" lines="1" style="font-size: 11px;">{{skill.name}}{% if not forloop.last %}, {% endif %}</span> {% endfor %}
+                              </span>
+                              </span>
+                            </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div cr="employment" cr-split="1" cr-employment="" class="row" id="e-170-c">
+                <div ng-controller="EmploymentCtrl" class="" id="e-171-c">
+                  <div class="col-md-12" id="e-172-c">
+                    <div class="" id="e-173-c">
+                      <div cr-section-header="" class="ng-isolate-scope" id="e-175-c">
+                        <div class="row section-header header-underline" crc-link="section_header" id="e-176-c">
+                          <div class="font-primary col-md-12 fg-primary lowercase medium" id="e-177-c">
+                            <span ng-transclude="" style="letter-spacing: 0px" class="font-weight-normal" id="e-179-c">
+                              <span class="" id="e-180-c">Employment</span>
+                            </span>
+                          </div>
+                          <div class="col-md-12" id="e-181-c">
+                            <div class="section-header-underline bg-primary underline-full underline-thin" id="e-182-c"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-container row header-padding" crc-link="employment" crc-link-tab="section" id="e-184-c">
+                        <div class="col-md-12" id="e-185-c">
+                          {% for exp in p.experiences.all %}
+                          <div ng-init="employerIndex = $index" class="" id="e-186-c">
+                            <div class="" id="e-187-c">
+                              <div ng-init="employmentIndex = $index" ng-include="src.item" class="" id="e-188-c">
+                                <!-- ngIf: employerIndex < 15 -->
+                                <div class="content-group" id="e-189-c">
+                                  <div class="row" id="e-190-c">
+                                    <div class="align-right block col-md-3" id="e-191-c">
+                                      <div class="inline-block item-date" id="e-291-c">
+                                        <span class="date font-primary cr-date" flex-height="10" flex-width="employment-" id="e-292-c" flex-height-font-size="13px" style="line-height: 1.1; font-size: 13px;">
+                                          {{exp.date_started|date:'b Y'|capfirst}} to {% if exp.is_current %}Present{% else %}{{exp.date_ended|date:'b Y'|capfirst}}{% endif %}
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div class="block col-md-9" id="e-192-c">
+                                      <table class="cr-ordering-table crd-row" ng-init="rowIndex = $index" id="e-303-c">
+                                        <tbody id="e-304-c">
+                                          <tr flex-width-parent="employment-0" id="e-305-c">
+                                            <td ng-init="colIndex = $index" class="crd-col" id="e-306-c">
+                                              <span flex-height="10" flex-width="employment-0" class="font-primary inline-block item-name" id="e-475-c" flex-height-font-size="13px" lines="1" style="line-height: 1.1; font-size: 13px;">{{exp.company}}</span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <table class="cr-ordering-table crd-row" ng-init="rowIndex = $index" id="e-310-c">
+                                        <tbody id="e-311-c">
+                                          <tr flex-width-parent="employment-1" id="e-312-c">
+                                            <td ng-init="colIndex = $index" class="crd-col" id="e-313-c">
+                                              <span flex-height="6" class="employer-title font-primary fg-secondary inline-block" flex-width="employment-1" id="e-477-c" flex-height-font-size="8px" lines="1" style="font-size: 8px;">{{exp.title}}</span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="font-secondary content-paragraph description ng-pristine ng-untouched ng-valid ng-isolate-scope" flex-height-font-size="11px" style="font-size: 11px;">
+                                        {{exp.description|safe}}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end ngIf: employerIndex < 15 -->
+                              </div>
+                            </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div cr="projects" cr-projects="" class="row" id="e-202-c">
+              <div ng-controller="ProjectsCtrl" class="" id="e-203-c">
+                <div class="col-md-12" id="e-205-c">
+                  <div class="" id="e-206-c">
+                    <div cr-section-header="" class="ng-isolate-scope" id="e-208-c">
+                      <div class="row section-header header-underline" crc-link="section_header" id="e-209-c">
+                        <div class="font-primary col-md-12 fg-primary lowercase medium" id="e-210-c">
+                          <span class="" id="e-211-c">
+                          </span>
+                          <span ng-transclude="" style="letter-spacing: 0px" class="font-weight-normal" id="e-212-c">
+                            <span class="" id="e-213-c">Projects</span>
+                          </span>
+                        </div>
+                        <div class="col-md-12" id="e-214-c">
+                          <div class="section-header-underline bg-primary underline-full underline-thin" id="e-215-c"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-container header-padding" crc-link="projects" crc-link-tab="section" id="e-216-c">
+                      {% for item in p.projects.all %}
+                      <div class="content-group" id="e-376-c">
+                        <div class="row" id="e-377-c">
+                          <div class="align-right block col-md-3" id="e-378-c">
+                            <div class="content-title" id="e-379-c">
+                              <div flex-height="10" class="font-primary link" id="e-380-c" flex-height-font-size="13px" style="font-size: 13px;"> <a href="{{ item.url }}" class="" id="e-381-c" style="line-height: 1.1;">{{ item.name }}</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="block col-md-9" id="e-382-c">
+                            <div markdown-viewer="" flex-height="7" class="font-secondary content-paragraph description ng-isolate-scope ng-valid" ng-model="item.description" id="e-383-c" flex-height-font-size="9px" style="font-size: 9px;">
+                              {{ item.description|safe }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div cr="awards" cr-awards="" class="row" id="e-217-c">
+              <div ng-controller="AwardsCtrl" class="" id="e-218-c">
+                <div class="col-md-12" id="e-220-c">
+                  <div class="" id="e-221-c">
+                    <div cr-section-header="" class="ng-isolate-scope" id="e-223-c">
+                      <div class="row section-header header-underline" crc-link="section_header" id="e-224-c">
+                        <div class="font-primary col-md-12 fg-primary lowercase medium" id="e-225-c">
+                          <span class="" id="e-226-c">
+                          </span>
+                          <span ng-transclude="" style="letter-spacing: 0px" class="font-weight-normal" id="e-227-c">
+                            <span class="" id="e-228-c">Awards</span>
+                          </span>
+                        </div>
+                        <div class="col-md-12" id="e-229-c">
+                          <div class="section-header-underline bg-primary underline-full underline-thin" id="e-230-c"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-container header-padding" crc-link="awards" crc-link-tab="section" id="e-231-c">
+                      {% for item in p.awards.all %}
+                      <div class="content-group" id="e-454-c">
+                        <div class="row" id="e-455-c">
+                          <div class="align-right block col-md-3" id="e-456-c">
+                            <div class="inline-block item-date" id="e-489-c" style="margin-top: 2.5px;">
+                              <span class="date font-primary cr-date" flex-height="7" flex-width="awards-" id="e-490-c" flex-height-font-size="9px" style="line-height: 1.1; font-size: 9px;">
+                                <span class="" id="e-491-c" lines="1">
+                                  {{item.date_awerded|date:'b Y'|capfirst}}
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="block col-md-9" id="e-457-c">
+                            <table class="cr-ordering-table crd-row" ng-init="rowIndex = $index" id="e-495-c">
+                              <tbody id="e-496-c">
+                                <tr flex-width-parent="awards-0" id="e-497-c">
+                                  <td ng-init="colIndex = $index" class="crd-col" id="e-498-c">
+                                    <span flex-width-ignore="" class="" id="e-499-c">
+                                      <span flex-height="10" flex-width="awards-0" class="font-primary inline-block item-name" id="e-501-c" flex-height-font-size="13px" lines="1" style="line-height: 1.1; font-size: 13px;">{{item.name }}</span>
+                                    </span>
+                                    <span flex-width-ignore="" class="" id="e-502-c">
+                                      <span flex-height="4" flex-width="awards-0" class="separator" ng-bind-html="bind.separator() | trusted" id="e-503-c" flex-height-font-size="6px" lines="1" style="font-size: 6px;">&nbsp;·&nbsp;</span>
+                                      <span flex-height="8" class="item-title font-primary inline-block" flex-width="awards-0" id="e-505-c" flex-height-font-size="11px" lines="1" style="font-size: 11px;">{{ item.awerder }}</span>
+                                    </span>
+                                  </td>
+                                  <td ng-init="colIndex = $index" class="crd-col align-right" id="e-506-c">
+                                    <span flex-width-ignore="" class="" id="e-507-c"></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div markdown-viewer="" flex-height="7" class="font-secondary content-paragraph description ng-isolate-scope ng-valid" ng-model="::item.description" id="e-459-c" flex-height-font-size="9px" style="font-size: 9px;">
+                              {{ item.description|safe }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div cr="activities" cr-activities="" class="row" id="e-232-c">
+              <div ng-controller="ActivitiesCtrl" class="" id="e-233-c"></div>
+            </div>
+            <div cr="volunteering" cr-volunteering="" class="row" id="e-234-c">
+              <div ng-controller="VolunteeringCtrl" class="" id="e-235-c"></div>
+            </div>
+          </div>
+        </div>
+        <div class="section-4 col-md-12" id="e-13-c">
+          <div cr-area="4" page-index="1" class="" id="e-14-c"></div>
+        </div>
+      </div>
+      <div class="hidden-components" style="display: none;" id="undefined-c">
+        <div cr-area="6" page-index="1" class="" id="e-15-c">
+          <div cr="employment_2" cr-split="2" cr-employment="" class="row" id="e-236-c">
+            <div ng-controller="EmploymentCtrl" class="" id="e-237-c"></div>
+          </div>
+          <div cr="summary" cr-summary="" class="row" id="e-238-c">
+            <div ng-controller="SummaryCtrl" class="" id="e-239-c">
+              <div class="col-md-12" id="e-241-c">
+                <div class="" id="e-242-c">
+                  <div cr-section-header="" class="ng-isolate-scope" id="e-244-c">
+                    <div class="row section-header header-underline" crc-link="section_header" id="e-245-c">
+                      <div class="font-primary col-md-12 fg-primary lowercase medium" id="e-246-c">
+                        <span class="" id="e-247-c">
+                        </span>
+                        <span ng-transclude="" style="letter-spacing: 0px" class="font-weight-normal" id="e-248-c">
+                          <span class="" id="e-249-c">Summary</span>
+                        </span>
+                      </div>
+                      <div class="col-md-12" id="e-250-c">
+                        <div class="section-header-underline bg-primary underline-full underline-thin" id="e-251-c"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-container header-padding" crc-link="summary" crc-link-tab="section" id="e-252-c">
+                    <div class="content-group" id="e-471-c">
+                      <div flex-height="3" markdown-viewer="" class="font-secondary content-paragraph ng-pristine ng-untouched ng-valid" ng-model="item.value" id="e-472-c" flex-height-font-size="5px" style="font-size: 5px;">
+                        <p id="e-473-c">
+                          <br id="undefined-c">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div cr="" cr-cover-letter="" class="row" style="display:none;" id="e-16-c">
+          <div class="col-md-12 font-secondary" style="font-size: 16px !important;" id="e-17-c">
+            <div cr-cover-letter-content="" id="e-18-c"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row flex-ignore" style="height: 15px" id="e-19-c"></div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
