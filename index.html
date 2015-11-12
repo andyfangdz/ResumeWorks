@@ -67,7 +67,10 @@
             <div class="container">
                 <div class="info-wrp">
                     <h2 class="main-text">Quick & Easy Way to Compose Resumes</h2>
-                    <p class="sub-text">ResumeWorks allows you to generate a unique resume for each company. <br/> Without copying and pasting.<br/><br/>Signup now to access all preminum features when we launch.</p>
+                    <p class="sub-text">ResumeWorks allows you to generate a unique resume for each company.
+                        <br/> Without copying and pasting.
+                        <br/>
+                        <br/>Signup now to access all preminum features when we launch.</p>
                     <a href="#signup" class="btn btn-default btn1">Pre-launch Signup</a>
                     <a href="#feature" class="btn btn-default btn2">Learn more</a>
                     <img src="images/resume-preview.png" alt="App image" class="img-responsive">
@@ -82,7 +85,8 @@
             <div class="container">
                 <h2 class="title">A Re-defination of Resumes</h2>
                 <p class="title-sub">
-                    Never worry about too many projects to fit in one page. <a href="http://resume.andyfang.me/print/printable/" class="btn btn-default btn-xs"></i>See Example</a>
+                    Never worry about too many projects to fit in one page.
+                    <a href="http://resume.andyfang.me/print/printable/" class="btn btn-default btn-xs"></i>See Example</a>
                 </p>
                 <hr class="mr-tb-40">
                 <div class="row eqh">
@@ -152,7 +156,8 @@
                         <div class="content">
                             <h2 class="title">Pick your own content</h2>
                             <p class="title-sub">
-                                The way resumes work is broken. Here's a fix to it. <a href="http://resume.andyfang.me/print/printable/" class="btn btn-default btn-xs"></i>See Example</a>
+                                The way resumes work is broken. Here's a fix to it.
+                                <a href="http://resume.andyfang.me/print/printable/" class="btn btn-default btn-xs"></i>See Example</a>
                             </p>
                             <div class="row eqh">
                                 <div class="col-sm-6">
@@ -218,7 +223,8 @@
                         <div class="content">
                             <h2 class="title">Get a portfolio site</h2>
                             <p class="title-sub">
-                                Our desinger portfolio templates make sure your job hunt doesn't stop at resumes. <a href="http://resume.andyfang.me/" class="btn btn-default btn-xs"></i>See Example</a>
+                                Our desinger portfolio templates make sure your job hunt doesn't stop at resumes.
+                                <a href="http://resume.andyfang.me/" class="btn btn-default btn-xs"></i>See Example</a>
                             </p>
                             <div class="row eqh">
                                 <div class="col-sm-6">
@@ -402,6 +408,7 @@
     <script src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/rgen.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -420,19 +427,19 @@
     </script>
     <script>
     $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
     </script>
 </body>
 
