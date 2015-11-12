@@ -67,7 +67,7 @@
             <div class="container">
                 <div class="info-wrp">
                     <h2 class="main-text">Quick & Easy Way to Compose Resumes</h2>
-                    <p class="sub-text">ResumeWorks allows you to pick relevant experiences and projects to generate a unique resume for each company without all the trouble of copying and pasting.</p>
+                    <p class="sub-text">ResumeWorks allows you to pick relevant experiences and projects to generate a unique resume for each company without all the trouble of copying and pasting.<br/><br/>Signup now to access all preminum features when we launch.</p>
                     <a href="#signup" class="btn btn-default btn1">Pre-launch Signup</a>
                     <a href="#feature" class="btn btn-default btn2">Learn more</a>
                     <img src="images/resume-preview.png" alt="App image" class="img-responsive">
@@ -77,25 +77,6 @@
             <div class="bg-section bg-cover bg-cc full-wh" data-bg="images/bg7.jpg"><b class="full-wh"></b></div>
         </section>
         <!-- /.intro-section -->
-        <!-- Slider -->
-        <section class="slider-section slider-section-4">
-            <div class="container">
-                <div class="carousel-widget ctrl-1" data-items="1" data-itemrange="false" data-tdrag="false" data-mdrag="false" data-pdrag="false" data-autoplay="true" data-loop="true" data-nav="false">
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <p class="content">
-                                Signup now to access all preminum features when we launch<br/>
-                                <a href="#signup" class="btn  btn-line light">Sign Up</a>
-                            </p>
-                        </div>
-                        <!-- /.item -->
-                    </div>
-                    <!-- /.owl-carousel -->
-                </div>
-                <!-- /.carousel-widget -->
-            </div>
-        </section>
-        <!-- /.slider-section -->
         <!-- Features -->
         <section id="feature" class="feature-section feature-section-2">
             <div class="container">
@@ -436,6 +417,22 @@
 
     ga('create', 'UA-70024712-1', 'auto');
     ga('send', 'pageview');
+    </script>
+    <script>
+    $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
     </script>
 </body>
 
